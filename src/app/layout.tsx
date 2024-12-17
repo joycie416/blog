@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Noto_Sans_KR } from "next/font/google";
 import "./globals.css";
+import Header from "@/components/rootLayout/Header";
 
 const notoSansKr = Noto_Sans_KR({
   preload: false,
@@ -21,7 +22,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${notoSansKr.variable} font-sans antialiased`}>
-        {children}
+        <Header/>
+        <main className="w-full min-h-screen">{children}</main>
       </body>
     </html>
   );
