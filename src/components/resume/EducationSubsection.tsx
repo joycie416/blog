@@ -7,10 +7,9 @@ const EducationSubsection = ({
 }: PropsWithChildren<{ data: EducationType }>) => {
   const { university, period, gpa, degree, courses } = data;
   return (
-    <div className="w-full grid grid-cols-[minmax(auto,240px)_auto] gap-5 py-4 border-t-[2px] border-black">
+    <div className="w-full grid sm:grid-cols-[minmax(auto,240px)_auto] gap-5 py-4 mt-4 border-t-[2px] border-black">
       <div className="flex flex-col">
-        <p>{university}</p>
-        <p>{degree}</p>
+        <p><span>{university}</span> <br className="max-sm:hidden"/> <span>{degree}</span></p>
         <p>{period}</p>
       </div>
       <div>

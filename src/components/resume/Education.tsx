@@ -1,5 +1,5 @@
 import React from "react";
-import EducationData from "./EducationSubsection";
+import EducationSubsection from "./EducationSubsection";
 import { EducationType } from "@/types/education";
 
 const Education = () => {
@@ -28,7 +28,7 @@ const Education = () => {
   return (
     <section className="w-full sm:w-full sm:max-w-[--max-width] flex flex-col p-4 mx-auto sm:px-0">
       <h3>Education</h3>
-      <EducationData data={bachelar}>
+      <EducationSubsection data={bachelar}>
         <ol className="list-inside list-decimal">
           <li>학석사연계 과정으로, 1년반만에 석사 취득</li>
           <li>
@@ -42,8 +42,8 @@ const Education = () => {
             </ul>
           </li>
         </ol>
-      </EducationData>
-      <EducationData data={master}>
+      </EducationSubsection>
+      <EducationSubsection data={master}>
         <ol className="list-inside list-decimal">
           <li>학석사연계 과정으로, 1년반만에 석사 취득</li>
           <li>차석 졸업</li>
@@ -63,7 +63,7 @@ const Education = () => {
             </ul>
           </li>
         </ol>
-      </EducationData>
+      </EducationSubsection>
     </section>
   );
 };
